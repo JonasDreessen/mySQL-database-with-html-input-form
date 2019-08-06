@@ -7,6 +7,35 @@
     <title>php communication</title>
 </head>
 <body>
-    <form action="servercommunication.php" method="GET"> <input type="text" name="firstname" placeholder="First Name" /> <input type="text" name="lastname" placeholder="Last Name" /><input type="text" name="textmessage" placeholder="Your message" /> <input type="submit" name="submit" /> </form> 
+    <form method="POST" action="servercommunication.php"> 
+        <input type="text" name="title" placeholder="your title" /> 
+        <input type="text" name="textmessageInput" placeholder="Your message" /> 
+        <input type="submit" name="submitinput" value="insert"/> 
+    </form> 
+
+    <form method="POST" action="servercommunication.php"> 
+        <input type="text" name="updateTitle" placeholder="update your title" /> 
+        <input type="text" name="updateTextMessageInput" placeholder="update your message" /> 
+        <input type="submit" name="submitupdate" value="update" /> 
+    </form> 
+
+    <form method="POST" action="servercommunication.php"> 
+        <input type="text" name="deleteTitle" placeholder="delete your title" /> 
+        <input type="submit" name="submitdelete" value="delete" /> 
+    </form> 
+    <form method="GET" action="servercommunication.php"> 
+        <input type="text" name="searchTitle" placeholder="fill in your title" /> 
+        <input type="submit" name="submitsearch" /> 
+    </form> 
+
+    <div class="getallmessagesbutton">
+        <button id="getallmessages">GET ALL MESSAGES!</button>
+        <div class="allmessages">
+            
+        </div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+    
 </body>
 </html>
