@@ -7,29 +7,36 @@
     <title>php communication</title>
 </head>
 <body>
-    <form method="POST" action="servercommunication.php"> 
-        <input type="text" name="title" placeholder="your title" /> 
+    <?php 
+    include("servercommunication.php");
+    ?>
+    <form method="POST" <?php echo $_SERVER['PHP_SELF'] ?> >
+        <input type="text" name="title" placeholder="your title"/> 
         <input type="text" name="textmessageInput" placeholder="Your message" /> 
         <input type="submit" name="submitinput" value="insert"/> 
     </form> 
 
-    <form method="POST" action="servercommunication.php"> 
+    <form method="POST"> 
         <input type="text" name="updateTitle" placeholder="update your title" /> 
         <input type="text" name="updateTextMessageInput" placeholder="update your message" /> 
         <input type="submit" name="submitupdate" value="update" /> 
     </form> 
 
-    <form method="POST" action="servercommunication.php"> 
+    <form method="POST"> 
         <input type="text" name="deleteTitle" placeholder="delete your title" /> 
         <input type="submit" name="submitdelete" value="delete" /> 
     </form> 
-    <form method="GET" action="servercommunication.php"> 
-        <input type="text" name="searchTitle" placeholder="fill in your title" /> 
-        <input type="submit" name="submitsearch" /> 
+    <form method="POST"> 
+        <input type="text" name="searchTitle" placeholder="fill in your title" class="specificmessagetitle" /> 
+        <!--<input type="submit" name="submitsearch" /> -->
+        <button class="getspecificmessage" type="button">GET SPECIFIC MESSAGE</button>
     </form> 
+    <div class="specificmessage">
+        
+    </div>
 
     <div class="getallmessagesbutton">
-        <button id="getallmessages">GET ALL MESSAGES!</button>
+        <button id="getallmessages" type="button">GET ALL MESSAGES!</button>
         <div class="allmessages">
             
         </div>

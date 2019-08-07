@@ -57,7 +57,7 @@ set_exception_handler(function($e) {
         }
     }
 
-    if($_GET['submitsearch']){
+    if($_POST['submitsearch']){
         if (empty($searchTitle)){
             echo "type in the title you would like to search";
         } else{  
@@ -66,8 +66,10 @@ set_exception_handler(function($e) {
             echo "Records was searched successfully.";
         }
     }
-
+    /*
     // fetch data from mysql and convert to jsonfile
+    $stmt = "mysql:host=localhost;dbname=Api_exercise_becode;charset=utf8mb4";     
+    $pdo = new PDO($stmt, "root", "root", $options);
     $data = $pdo->query("SELECT * FROM notes")->fetchAll();
     $json = json_encode($data);
-    print_r($json); 
+    print_r($json); */
