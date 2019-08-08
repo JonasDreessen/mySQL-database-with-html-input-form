@@ -67,3 +67,61 @@ function displayErrorMessage(){
     let newPara = messageHolder.appendChild(para);
     newPara.innerHTML = "This title does not exist";
 }
+
+
+const insertTab = document.getElementById("insert");
+const updateTab = document.getElementById("update");
+const deleteTab = document.getElementById("delete");
+const searchMessageTab = document.getElementById("search-message");
+const searchAllTab = document.getElementById("search-all");
+
+insertTab.addEventListener("click", showInsertTab);
+updateTab.addEventListener("click", showUpdateTab);
+deleteTab.addEventListener("click", showDeleteTab);
+searchMessageTab.addEventListener("click", showSearchMessageTab);
+searchAllTab.addEventListener("click", showSearchAllTab);
+
+function showInsertTab(){
+    document.querySelector(".insert").style.display = "block";
+    document.querySelector(".update").style.display = "none";
+    document.querySelector(".delete").style.display = "none";
+    document.querySelector(".specific-message").style.display = "none";
+    document.querySelector(".all-messages").style.display = "none";
+}
+showInsertTab();
+
+function showUpdateTab(){
+    document.querySelector(".insert").style.display = "none";
+    document.querySelector(".update").style.display = "block";
+    document.querySelector(".delete").style.display = "none";
+    document.querySelector(".specific-message").style.display = "none";
+    document.querySelector(".all-messages").style.display = "none";
+}
+
+function showDeleteTab(){
+    document.querySelector(".insert").style.display = "none";
+    document.querySelector(".update").style.display = "none";
+    document.querySelector(".delete").style.display = "block";
+    document.querySelector(".specific-message").style.display = "none";
+    document.querySelector(".all-messages").style.display = "none";
+}
+
+function showSearchMessageTab(){
+    document.querySelector(".insert").style.display = "none";
+    document.querySelector(".update").style.display = "none";
+    document.querySelector(".delete").style.display = "none";
+    document.querySelector(".specific-message").style.display = "block";
+    document.querySelector(".all-messages").style.display = "none";
+}
+
+function showSearchAllTab(){
+    document.querySelector(".insert").style.display = "none";
+    document.querySelector(".update").style.display = "none";
+    document.querySelector(".delete").style.display = "none";
+    document.querySelector(".specific-message").style.display = "none";
+    document.querySelector(".all-messages").style.display = "block";
+}
+
+
+
+
